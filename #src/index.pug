@@ -1,13 +1,37 @@
 doctype html
-html(lang="кг")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Manex
+    title Mannex
     link(rel="stylesheet", href="css/style.min.css")
   body 
     include _header.pug
     main.main
+      section.hero 
+        .container 
+          .hero__top 
+            .hero__content 
+              h1.hero__title 
+                |Предлагаем только
+                |качественные 
+                span.hero__span запчасти 
+                |для иномарок
+              .hero__catalog
+                a.hero__link(href="#") Посмотреть каталог
+                p Более 50 товаров
+            .hero__slider 
+              .hero__btns 
+                button.hero__btn.hero__btn--prev 
+                  include img/arrow.svg
+                button.hero__btn.hero__btn--next 
+                  include img/arrow.svg
+              ul.hero__slides 
+                li.hero__slide 
+                  img(src="img/tire.png", alt="tire")
+              .hero__numbers 
+                span 01
+                |/08
     include _footer.pug
     script(src="js/script.min.js") 
