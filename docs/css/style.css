@@ -224,6 +224,19 @@ button {
 body {
   font-family: "Gilroy-Regular";
   font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .container {
@@ -395,4 +408,92 @@ body {
 
 .header__searchbtn:hover {
   opacity: 0.8;
+}
+
+.footer {
+  font-size: 18px;
+  background-color: #F5F5F5;
+  padding: 50px 0;
+}
+
+.footer__logo {
+  margin-bottom: 50px;
+  display: block;
+}
+
+.footer__text:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.footer__title {
+  font-size: 24px;
+  margin-bottom: 37px;
+}
+
+.footer__blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__item {
+  color: #434242;
+}
+
+.footer__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.footer__link {
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.footer__link:hover {
+  opacity: 0.5;
+}
+
+.footer__link--mail {
+  position: relative;
+  padding-left: 30px;
+}
+
+.footer__link--mail::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/mail.svg);
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.footer__link--tel {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+}
+
+.footer__link--tel::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/tel.svg);
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.footer__link--tel2 {
+  padding-left: 30px;
 }
