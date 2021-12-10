@@ -67,7 +67,7 @@ function browserSync() {
 function pugHtml() {
   return src(path.src.pug)
     .pipe(pug())
-    .pipe(fileinclude())
+    // .pipe(fileinclude())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream())
 }

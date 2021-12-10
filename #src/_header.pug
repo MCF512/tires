@@ -1,13 +1,21 @@
 header.header
-  a.logo(href="#")
-    img(src="img/logo.png", alt="logo")
-  nav.header__nav
-    li.header__item Главная 
-    li.header__item Pro-Запрос 
-    li.header__item Гараж
-    li.header__item Контакты 
-    li.header__item Заказы
-  .header__user 
-    button.header__cart
-    .header__price 
-    button.header__login
+  .container 
+    .header__top 
+      a.logo(href="#")
+        img(src="img/logo.png", alt="logo")
+      nav.header__nav
+        li.header__item.header__item--active Главная 
+        li.header__item Pro-Запрос 
+        li.header__item Гараж
+        li.header__item Контакты 
+        li.header__item Заказы
+      .header__user 
+        .header__cart
+          button
+          .header__quantity
+        .header__price 100000 p
+        button.header__icon 
+        button.header__login Войти
+    form.header__form(action="#")
+      input.header__searchbar(type="search" placeholder="Поиск по артикулу")
+      button.header__searchbtn Поиск
