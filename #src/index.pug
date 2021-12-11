@@ -50,5 +50,131 @@ html(lang="ru")
               a.about__more(href="#") Читать дальше
             .about__img 
               img(src="img/about.jpg", alt="about")
+      section.catalog 
+        .container 
+          h2.catalog__title.title Каталог 
+          ul.catalog__filters
+            li.catalog__filter 
+              button.catalog__filter-btn.catalog__filter-btn--active Шины
+            li.catalog__filter 
+              button.catalog__filter-btn Диски
+            li.catalog__filter 
+              button.catalog__filter-btn Каталог ТО
+            li.catalog__filter 
+              button.catalog__filter-btn Масло и автохимия
+            li.catalog__filter 
+              button.catalog__filter-btn Аккумуляторы
+            li.catalog__filter 
+              button.catalog__filter-btn Колпаки
+            li.catalog__filter 
+              button.catalog__filter-btn Болты, гайки
+          .catalog__wrapper 
+            form.catalog__form(action="#")
+              label(for="type") Тип
+              select(name="type" form)
+                option(value="type_all") Выбраны все   
+                option(value="summer") Летние   
+                option(value="winter") Зимние 
+              label(for="producer") Производитель
+              select(name="producer" form)
+                option(value="producer_all") Выбраны все 
+                option(value="michlen") Michlen 
+              label(for="size") Размер
+              select(name="size" form)
+                option(value="size_all") Выбраны все 
+                option(value="16") 16               
+              label(for="diameter") Диаметр
+              select(name="diameter" form)
+                option(value="diameter_all") Выбраны все 
+                option(value="190") 190
+              button.catalog__submit(type="submit") Подобрать
+            ul.catalog__cards.cards  
+              li.catalog__card.card 
+                .card__img 
+                  img(src="img/tire.png", alt="tire")
+                h3.card__title Michelin
+                p.card__about Шина летняя "Primacy 3 GRNX 205/55R16 91V"
+                .card__bottom
+                  p.card__price 990 p
+                  .card__quantity
+                    button.card__minus 
+                    p.card__count 1
+                    button.card__plus 
+                  button.card__add 
+                    include img/cart.svg
+              li.catalog__card.card 
+                .card__img 
+                  img(src="img/tire.png", alt="tire")
+                h3.card__title Michelin
+                p.card__about Шина летняя "Primacy 3 GRNX 205/55R16 91V"
+                .card__bottom
+                  p.card__price 990 p
+                  .card__quantity
+                    button.card__minus 
+                    p.card__count 1
+                    button.card__plus 
+                  button.card__add 
+                    include img/cart.svg
+              li.catalog__card.card 
+                .card__img 
+                  img(src="img/tire.png", alt="tire")
+                h3.card__title Michelin
+                p.card__about Шина летняя "Primacy 3 GRNX 205/55R16 91V"
+                .card__bottom
+                  p.card__price 990 p
+                  .card__quantity
+                    button.card__minus 
+                    p.card__count 1
+                    button.card__plus 
+                  button.card__add 
+                    include img/cart.svg
+              li.catalog__card.card 
+                .card__img 
+                  img(src="img/tire.png", alt="tire")
+                h3.card__title Michelin
+                p.card__about Шина летняя "Primacy 3 GRNX 205/55R16 91V"
+                .card__bottom
+                  p.card__price 990 p
+                  .card__quantity
+                    button.card__minus 
+                    p.card__count 1
+                    button.card__plus 
+                  button.card__add 
+                    include img/cart.svg
+              li.catalog__card.card 
+                .card__img 
+                  img(src="img/tire.png", alt="tire")
+                h3.card__title Michelin
+                p.card__about Шина летняя "Primacy 3 GRNX 205/55R16 91V"
+                .card__bottom
+                  p.card__price 990 p
+                  .card__quantity
+                    button.card__minus 
+                    p.card__count 1
+                    button.card__plus 
+                  button.card__add 
+                    include img/cart.svg
+              li.catalog__card.card 
+                .card__img 
+                  img(src="img/tire.png", alt="tire")
+                h3.card__title Michelin
+                p.card__about Шина летняя "Primacy 3 GRNX 205/55R16 91V"
+                .card__bottom
+                  p.card__price 990 p
+                  .card__quantity
+                    button.card__minus 
+                    p.card__count 1
+                    button.card__plus 
+                  button.card__add 
+                    include img/cart.svg
+          ul.catalog__paggination 
+            li.catalog__number
+              button.catalog__page.catalog__page--active 1
+            li.catalog__number
+              button.catalog__page 2
+            li.catalog__number
+              button.catalog__page.catalog__page--disable  ...
+            li.catalog__number
+              button.catalog__page 321
     include _footer.pug
     script(src="js/script.min.js") 
