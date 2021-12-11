@@ -259,9 +259,11 @@
 }
 
 .hero {
+  padding-bottom: 100px;
 
   &__top {
     display: flex;
+    padding-bottom: 50px;
   }
 
   &__title {
@@ -333,6 +335,199 @@
     span {
       font-size: 64px;
       color: $main_color;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    background-color: $main_color;
+    color: $white;
+    font-size: 30px;
+    padding: 35px 101px;
+    box-shadow: 0px -10px 20px rgba(75, 169, 255, 0.35);
+  }
+
+  @media (max-width:1024px) {
+    &__top {
+      flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+      padding-bottom: 200px;
+    }
+
+    &__title {
+      font-size: 64px;
+      padding-right: 50px;
+      margin-bottom: 0;
+    }
+
+    &__item {
+      font-size: 18px;
+      padding: 25px 50px;
+    }
+
+    // &__slider {
+    //   // padding-bottom: 150px;
+    // }
+
+    &__content {
+      position: relative;
+    }
+
+    &__link {
+      font-size: 18px;
+      padding: 28px 93px;
+    }
+
+    &__catalog {
+      position: absolute;
+      bottom: -760px;
+      // left: 50%;
+      // transform: translateX(-50%);
+      max-width: 100%;
+      width: 100%;
+      justify-content: center;
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media (max-width:375px) {
+    padding-bottom: 50px;
+    
+    &__title {
+      font-size: 34px;
+      padding-right: 0;
+    }
+
+    &__bottom {
+      flex-direction: column;
+    }
+
+    &__catalog {
+      bottom: -350px;
+      flex-direction: column;
+    }
+
+    &__link {
+      margin-right: 0;
+      font-size: 14px;
+      padding: 20px 67px;
+      margin-bottom: 20px;
+    }
+
+    &__item {
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
+  
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__btn {
+      width: 24px;
+      height: 24px;
+
+      svg {
+        width: 12;
+        height: 12px;
+      }
+
+      &--prev {
+        margin-right: 10px;
+      }
+    }
+
+    &__numbers {
+      font-size: 18px;
+
+      span {
+        font-size: 31px;
+      }
+    }
+  }
+
+}
+
+.about {
+  padding-bottom: 50px;
+
+  &__title::after {
+    content: 'О компании';
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__content {
+    max-width: 800px;
+    margin-right: 20px;
+  }
+
+  &__text {
+    font-size: 21px;
+    margin-bottom: 65px;
+    span {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__more {
+    font-size: 24px;
+    border: 1px solid $input_border;
+    padding: 30px 150px;
+    display: block;
+    width: fit-content;
+  }
+
+  @media (max-width: 1024px) {
+    
+    &__text {
+      max-width: 830px;
+      font-size: 18px;
+
+      span:nth-child(3) {
+        display: none;
+      }
+      span:nth-child(4) {
+        display: none;
+      }
+    }
+
+    &__more {
+      padding: 27px 115px;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    &__img {
+      display: none;
+    }
+
+    &__text {
+      font-size: 12px;
+      margin-bottom: 30px;
+    }
+
+    &__more {
+      padding: 20px 80px;
+      font-size: 14px;
+      margin: 0 auto;
     }
   }
 }
