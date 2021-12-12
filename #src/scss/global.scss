@@ -60,3 +60,51 @@ body {
     }
   }
 }
+
+.paggination {
+  display: flex;
+  justify-content: center;
+
+  &--cart {
+    margin-bottom: 50px;
+  }
+
+  &__page {
+    font-size: 24px;
+    padding: 10px 17px;
+    font-weight: 700;
+    transition: background-color 0.5s, color 0.5s;
+
+    &:hover {
+      color: $white;
+      background-color: $main_color;
+    }
+
+    &--active {
+      color: $white;
+      background-color: $main_color;
+    }
+
+    &--disable {
+      cursor: default;
+
+      &:hover {
+        background-color: $white;
+        color: $dark;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    &__page {
+      font-size: 12px;
+      padding: 6px 9px;
+    }
+  }
+}
+
+.page__title {
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
